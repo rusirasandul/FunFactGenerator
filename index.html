@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts Generator</h1>
+        <p id="fact">Click the button to see a fun fact!</p>
+        <button onclick="generateFact()">Generate Another Fun Fact</button>
+    </div>
+
+    <script>
+        const facts = [
+            "Cats are crepuscular, meaning they are most active during dawn and dusk.",
+            "A cat’s nose print is as unique as a human fingerprint.",
+            "Cats can make over 100 different vocalizations, while dogs can only make about 10.",
+            "The average cat sleeps for about 12-16 hours a day.",
+            "A group of cats is called a clowder.",
+            "Cats use their whiskers to help them navigate and sense their environment.",
+            "The oldest known cat lived to be 38 years old.",
+            "A cat's purr vibrates at a frequency that may promote healing.",
+            "Unlike dogs, cats do not have a sweet tooth.",
+            "A cat can rotate its ears 180 degrees."
+        ];
+
+        function generateFact() {
+            const factElement = document.getElementById("fact");
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factElement.textContent = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
