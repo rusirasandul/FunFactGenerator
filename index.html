@@ -3,46 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Facts Generator</title>
+    <title>Sri Lanka Fun Facts</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
             margin: 0;
         }
 
         .container {
             text-align: center;
-            background: white;
-            padding: 20px;
+            border: 2px solid #007bff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            color: #333;
-        }
-
-        p {
-            font-size: 18px;
-            color: #555;
-            margin: 20px 0;
+            color: #007bff;
         }
 
         button {
-            padding: 10px 15px;
-            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
             background-color: #007bff;
             color: white;
-            border: none;
             cursor: pointer;
-            border-radius: 5px;
+            font-size: 16px;
         }
 
         button:hover {
@@ -52,30 +46,29 @@
 </head>
 <body>
     <div class="container">
-        <h1>Fun Facts Generator</h1>
-        <p id="fact">Click the button to see a fun fact!</p>
-        <button onclick="generateFact()">Generate Another Fun Fact</button>
+        <h1>Sri Lanka Fun Facts</h1>
+        <p id="fact">Click the button to generate a fun fact!</p>
+        <button id="generate-btn">Generate Fact</button>
     </div>
-
     <script>
         const facts = [
-            "Cats are crepuscular, meaning they are most active during dawn and dusk.",
-            "A cat’s nose print is as unique as a human fingerprint.",
-            "Cats can make over 100 different vocalizations, while dogs can only make about 10.",
-            "The average cat sleeps for about 12-16 hours a day.",
-            "A group of cats is called a clowder.",
-            "Cats use their whiskers to help them navigate and sense their environment.",
-            "The oldest known cat lived to be 38 years old.",
-            "A cat's purr vibrates at a frequency that may promote healing.",
-            "Unlike dogs, cats do not have a sweet tooth.",
-            "A cat can rotate its ears 180 degrees."
+            "Sri Lanka is home to a wide variety of wildlife, including elephants, leopards, and numerous bird species.",
+            "Sri Lanka is one of the world's largest tea producers, known for its Ceylon tea.",
+            "The country boasts eight UNESCO World Heritage Sites, including the ancient city of Sigiriya.",
+            "Sri Lanka is recognized as one of the world's biodiversity hotspots.",
+            "Cricket is the most popular sport in Sri Lanka, and the national team won the ICC Cricket World Cup in 1996.",
+            "The island is famous for its beautiful beaches, such as Unawatuna and Mirissa.",
+            "Sri Lanka has a long tradition of Ayurveda, an ancient system of medicine.",
+            "Sri Lankan cuisine is known for its bold flavors and use of spices.",
+            "The country has ancient ruins and temples that date back over 2,500 years.",
+            "Sri Lankans are known for their hospitality and friendliness."
         ];
 
-        function generateFact() {
-            const factElement = document.getElementById("fact");
+        document.getElementById('generate-btn').addEventListener('click', function() {
             const randomIndex = Math.floor(Math.random() * facts.length);
-            factElement.textContent = facts[randomIndex];
-        }
+            document.getElementById('fact').textContent = facts[randomIndex];
+        });
     </script>
 </body>
 </html>
+
